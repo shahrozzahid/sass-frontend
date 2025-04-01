@@ -1,0 +1,234 @@
+@use "../partials/variables" as var;
+@use "../partials/global-layout" as global-layout;
+
+@mixin navBarResDesign{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 85px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 2;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+}
+
+/*==================== RESPONSIVE DESIGN===================== */
+
+
+@media (max-width: 1024px) {
+
+  section.tenth-section{
+    .tenth-container{
+      text-align: center;
+      h2{
+        width: 100%;
+      }
+    }
+  }
+
+  section {
+    &.second-section,
+    &.third-section,
+    &.fifth-section,
+    &.eight-section,
+    &.eighth-section,
+    &.eleventh-section,
+    &.twelfth-section,
+    &.sixth-section,
+    &.ninth-section,
+    &.tenth-section{
+      @include global-layout.l-res-grid;
+    }
+  }
+  section.first-section {
+    @include global-layout.l-res-grid;
+    display: grid;
+    .first-container {
+      .gallery{
+        gap: 5px 10px;
+        justify-content: center;
+      }
+    }
+  }
+  $sections: (
+          second-section: (sec-first-container, sec-second-container),
+          third-section: (third-sec-second-container),
+          fifth-section: (fifth-sec-first-container, fifth-sec-second-container ),
+          eight-section: (eight-sec-first-container, eight-sec-second-container ),
+          eleventh-section: (eleventh-sec-first-container, eleventh-sec-second-container ),
+          twelfth-section: (twelfth-sec-second-container, twelfth-sec-first-container ),
+  );
+  @each $section, $containers in $sections {
+    section.#{$section} {
+      @each $container in $containers {
+        .#{$container} {
+          @include global-layout.l-flex-direction-row;
+          max-width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .header{
+    nav{
+      ul{
+        @include navBarResDesign;
+        li{
+          border-bottom: .5px solid #444;
+        }
+      }
+      .nav__menu__btn {
+        display: flex;
+      }
+    }
+  }
+  .nav-active {
+    display: flex !important;
+  }
+
+
+  .third-section,
+  .sixth-section,
+  .ninth-section,
+  .twelfth-section{
+    grid-template-areas:
+    'first first'
+    'second second';
+    .third-sec-first-container,
+    div.sixth-sec-first-container,
+    div.ninth-sec-first-container,
+    div.twelfth-sec-first-container{
+      grid-area: second;
+      padding-top: 2em;
+      justify-content: center;
+      align-items: center;
+    }
+    .third-sec-second-container,
+    .sixth-sec-second-container,
+    .ninth-sec-second-container,
+    .twelfth-sec-second-container{
+      grid-area: first;
+      button.layout-btn{
+        margin: 3em auto auto auto;
+      }
+    }
+  }
+  .third-section,
+  .fifth-section,
+  .eight-section,
+  .eleventh-section{
+    div.third-sec-first-container {
+      gap: 5px 10px;
+    }
+    .third-sec-second-container,
+    .fifth-sec-first-container,
+    .eight-sec-first-container,
+    .eleventh-sec-first-container{
+      button.layout-btn{
+        margin: 3em auto auto auto;
+      }
+    }
+  }
+  .thirteen-section{
+    .thirteen-sec-hero{
+      justify-content: center;
+      align-items: center;
+      button.layout-btn{
+        margin: 3em auto auto auto;
+      }
+    }
+  }
+  .footer{
+    .footer-sec-first{
+      grid-template-columns: 2fr 2fr;
+      ul{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  div{
+    img.genirc-img{
+      width: 100% !important;
+      padding-top: 15px;
+    }
+  }
+
+  section.res-section-layout{
+    div.res-font-set{
+      h2{
+        font-size: 1.5em;
+        text-align: left;
+      }
+      p{
+        font-size: 1em;
+        text-align: left;
+
+      }
+    }
+  }
+  .main {
+    section.hero-section {
+      div.hero-img {
+        flex-direction: row;
+        text-align: center;
+        gap: 10px;
+        h1 {
+          font-size: 2em;
+          width: 100%;
+        }
+        p{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+
+  .header,
+  .main,
+  .hero-section,
+  .footer,
+  .four-section,
+  .seven-section,
+  .thirteen-section{
+    width: 100%;
+  }
+
+  section {
+    &.sixth-section .sixth-sec-second-container ul,
+    &.sixth-section .ninth-sec-second-container ul,
+    &.ninth-section .sixth-sec-second-container ul,
+    &.ninth-section .ninth-sec-second-container ul,
+    &.third-section .third-sec-second-container ul {
+      font-size: 1em;
+    }
+  }
+  #thirteen{
+    div{
+      h2{
+        text-align: center;
+      }
+    }
+  }
+
+  .footer{
+    .footer-sec-first{
+      grid-template-columns: 1fr;
+      ul{
+        width: 100%;
+        margin: 1em 0;
+        padding: 0 2em;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use "variables" as var;
+
+
+/* ===============GENERIC PLACEHOLDER==================== */
+
+%g-link-text-design{
+  text-decoration: none;
+  color: var.$sub-heading-color;
+}
+%g-logo-design{
+  min-height: 2em;
+  max-height: 3em;
+}
+
+%add-overlay-img{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+%circle-tick-desing{
+  content: "✔";
+  position: absolute;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: var.$bg-color;
+  background-color: var.$layout-bg-color;
+  border-radius: 50%;
+  font-weight: bold;
+  top: 0.5em;
+}
+%span-square{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+
+html
+{
+  font-size: var.$layout-font-size;
+  scroll-behavior: smooth;
+}
+body{
+  font-family: var.$layout-font-style;
+  background-color: var.$bg-color;
+  box-sizing: border-box;
+  margin: 0 auto;  // Centers content
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

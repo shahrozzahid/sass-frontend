@@ -1,0 +1,833 @@
+@charset "UTF-8";
+/* ===============GENERIC PLACEHOLDER==================== */
+.header nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.header .main-container .nav__header .nav__logo a img {
+  min-height: 2em;
+  max-height: 3em;
+}
+
+.main .hero-section .hero-img::before, .four-section .four-sec-hero-img::before, .seven-section .seven-sec-hero-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+.third-section .third-sec-second-container ul li::before, .sixth-section .sixth-sec-second-container ul li::before, .sixth-section .ninth-sec-second-container ul li::before, .ninth-section .sixth-sec-second-container ul li::before, .ninth-section .ninth-sec-second-container ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  background-color: #D1B55A;
+  border-radius: 50%;
+  font-weight: bold;
+  top: 0.5em;
+}
+
+.second-section .sec-first-container ul li:nth-child(1) span, .second-section .sec-first-container ul li:nth-child(2) span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "system-ui", Sans-serif;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.first-section .first-container, .second-section, .third-section, .four-section, .fifth-section, .eight-section, .eleventh-section, .twelfth-section, .sixth-section, .ninth-section, .seven-section, .tenth-section .tenth-container {
+  margin: 4em auto;
+}
+
+.first-section .first-container .layout-btn a, .third-section .third-sec-second-container .layout-btn a, .fifth-section .fifth-sec-first-container .layout-btn a, .fifth-section .eight-sec-first-container .layout-btn a, .fifth-section .eleventh-sec-first-container .layout-btn a, .fifth-section .twelfth-sec-second-container .layout-btn a, .eight-section .fifth-sec-first-container .layout-btn a, .eight-section .eight-sec-first-container .layout-btn a, .eight-section .eleventh-sec-first-container .layout-btn a, .eight-section .twelfth-sec-second-container .layout-btn a, .eleventh-section .fifth-sec-first-container .layout-btn a, .eleventh-section .eight-sec-first-container .layout-btn a, .eleventh-section .eleventh-sec-first-container .layout-btn a, .eleventh-section .twelfth-sec-second-container .layout-btn a, .twelfth-section .fifth-sec-first-container .layout-btn a, .twelfth-section .eight-sec-first-container .layout-btn a, .twelfth-section .eleventh-sec-first-container .layout-btn a, .twelfth-section .twelfth-sec-second-container .layout-btn a, .first-section .first-container .layout-btn, .third-section .third-sec-second-container .layout-btn, .fifth-section .fifth-sec-first-container .layout-btn, .fifth-section .eight-sec-first-container .layout-btn, .fifth-section .eleventh-sec-first-container .layout-btn, .fifth-section .twelfth-sec-second-container .layout-btn, .eight-section .fifth-sec-first-container .layout-btn, .eight-section .eight-sec-first-container .layout-btn, .eight-section .eleventh-sec-first-container .layout-btn, .eight-section .twelfth-sec-second-container .layout-btn, .eleventh-section .fifth-sec-first-container .layout-btn, .eleventh-section .eight-sec-first-container .layout-btn, .eleventh-section .eleventh-sec-first-container .layout-btn, .eleventh-section .twelfth-sec-second-container .layout-btn, .twelfth-section .fifth-sec-first-container .layout-btn, .twelfth-section .eight-sec-first-container .layout-btn, .twelfth-section .eleventh-sec-first-container .layout-btn, .twelfth-section .twelfth-sec-second-container .layout-btn {
+  background-color: #D1B55A;
+}
+
+.thirteen-section .thirteen-sec-hero .layout-btn a, .thirteen-section .thirteen-sec-hero .layout-btn {
+  background-color: #000000;
+}
+
+.first-section .first-container, .second-section, .third-section, .fifth-section, .eight-section, .eleventh-section, .twelfth-section, .sixth-section, .ninth-section, .tenth-section .tenth-container, .thirteen-section .thirteen-sec-hero, .horizontal-line, .footer-sec-second, .footer .footer-sec-first, .header .main-container {
+  max-width: 78rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main .hero-section .hero-img, .first-section .first-container .gallery, .second-section .sec-first-container, .second-section .sec-second-container, .third-section .third-sec-second-container, .fifth-section .fifth-sec-first-container, .fifth-section .eight-sec-first-container, .fifth-section .eleventh-sec-first-container, .fifth-section .twelfth-sec-second-container, .eight-section .fifth-sec-first-container, .eight-section .eight-sec-first-container, .eight-section .eleventh-sec-first-container, .eight-section .twelfth-sec-second-container, .eleventh-section .fifth-sec-first-container, .eleventh-section .eight-sec-first-container, .eleventh-section .eleventh-sec-first-container, .eleventh-section .twelfth-sec-second-container, .twelfth-section .fifth-sec-first-container, .twelfth-section .eight-sec-first-container, .twelfth-section .eleventh-sec-first-container, .twelfth-section .twelfth-sec-second-container, .fifth-section .fifth-sec-second-container, .fifth-section .eight-sec-second-container, .fifth-section .eleventh-sec-second-container, .fifth-section .twelfth-sec-first-container, .eight-section .fifth-sec-second-container, .eight-section .eight-sec-second-container, .eight-section .eleventh-sec-second-container, .eight-section .twelfth-sec-first-container, .eleventh-section .fifth-sec-second-container, .eleventh-section .eight-sec-second-container, .eleventh-section .eleventh-sec-second-container, .eleventh-section .twelfth-sec-first-container, .twelfth-section .fifth-sec-second-container, .twelfth-section .eight-sec-second-container, .twelfth-section .eleventh-sec-second-container, .twelfth-section .twelfth-sec-first-container, .sixth-section .sixth-sec-first-container, .sixth-section .ninth-sec-first-container, .ninth-section .sixth-sec-first-container, .ninth-section .ninth-sec-first-container, .sixth-section .sixth-sec-second-container, .sixth-section .ninth-sec-second-container, .ninth-section .sixth-sec-second-container, .ninth-section .ninth-sec-second-container, .thirteen-section .thirteen-sec-hero, .header, .header .main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thirteen-section .thirteen-sec-hero .layout-btn, .first-section .first-container .layout-btn, .third-section .third-sec-second-container .layout-btn, .fifth-section .fifth-sec-first-container .layout-btn, .fifth-section .eight-sec-first-container .layout-btn, .fifth-section .eleventh-sec-first-container .layout-btn, .fifth-section .twelfth-sec-second-container .layout-btn, .eight-section .fifth-sec-first-container .layout-btn, .eight-section .eight-sec-first-container .layout-btn, .eight-section .eleventh-sec-first-container .layout-btn, .eight-section .twelfth-sec-second-container .layout-btn, .eleventh-section .fifth-sec-first-container .layout-btn, .eleventh-section .eight-sec-first-container .layout-btn, .eleventh-section .eleventh-sec-first-container .layout-btn, .eleventh-section .twelfth-sec-second-container .layout-btn, .twelfth-section .fifth-sec-first-container .layout-btn, .twelfth-section .eight-sec-first-container .layout-btn, .twelfth-section .eleventh-sec-first-container .layout-btn, .twelfth-section .twelfth-sec-second-container .layout-btn {
+  color: #fff;
+  padding: 0.7em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 3em auto auto auto;
+}
+.thirteen-section .thirteen-sec-hero .layout-btn a, .first-section .first-container .layout-btn a, .third-section .third-sec-second-container .layout-btn a, .fifth-section .fifth-sec-first-container .layout-btn a, .fifth-section .eight-sec-first-container .layout-btn a, .fifth-section .eleventh-sec-first-container .layout-btn a, .fifth-section .twelfth-sec-second-container .layout-btn a, .eight-section .fifth-sec-first-container .layout-btn a, .eight-section .eight-sec-first-container .layout-btn a, .eight-section .eleventh-sec-first-container .layout-btn a, .eight-section .twelfth-sec-second-container .layout-btn a, .eleventh-section .fifth-sec-first-container .layout-btn a, .eleventh-section .eight-sec-first-container .layout-btn a, .eleventh-section .eleventh-sec-first-container .layout-btn a, .eleventh-section .twelfth-sec-second-container .layout-btn a, .twelfth-section .fifth-sec-first-container .layout-btn a, .twelfth-section .eight-sec-first-container .layout-btn a, .twelfth-section .eleventh-sec-first-container .layout-btn a, .twelfth-section .twelfth-sec-second-container .layout-btn a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4em;
+  font-family: "system-ui", Sans-serif;
+}
+
+/*===============RESPONSIVE LAYOUT=================*/
+.res-fig-set figure {
+  margin: 0;
+  width: fit-content;
+}
+
+.header {
+  flex-direction: row;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+.header .main-container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+.footer .footer-sec-first {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+.footer .footer-sec-first ul {
+  text-decoration: none;
+  font-size: 1.2rem;
+  list-style: none;
+  font-family: "system-ui", Sans-serif;
+  background-color: inherit;
+  margin: 3em auto;
+}
+.footer .footer-sec-first ul li {
+  color: #606060;
+  line-height: 1.4em;
+  margin-top: 1em;
+  background-color: inherit;
+}
+.footer .footer-sec-first ul li a {
+  background-color: inherit;
+}
+.footer .footer-sec-first ul li a img {
+  background-color: inherit;
+  min-height: 2em;
+  max-height: 3em;
+}
+.footer .footer-sec-first ul li p {
+  background-color: inherit;
+  font-size: 1em;
+  color: #fff;
+  font-family: "system-ui", Sans-serif;
+}
+.footer .footer-sec-first ul li {
+  background-color: inherit;
+}
+.footer .footer-sec-first ul li h3 {
+  font-size: 1.3em;
+  background-color: inherit;
+  color: #D1B55A;
+  padding-bottom: 10px;
+}
+.footer .footer-sec-first ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer .footer-sec-first ul li .icon-color {
+  color: #fff;
+  padding-right: 0.3em;
+  background-color: inherit;
+}
+.footer .footer-sec-first ul .footer-icon a {
+  color: #D1B55A;
+}
+
+.footer-sec-second {
+  background-color: inherit;
+}
+.footer-sec-second p {
+  background-color: transparent;
+  text-align: center;
+  font-size: 1em;
+  color: #606060;
+  margin: 1em auto;
+  line-height: 30px;
+  font-family: "system-ui", Sans-serif;
+}
+.footer-sec-second p span {
+  background-color: inherit;
+}
+
+.header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5em;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "system-ui", Sans-serif;
+  color: #000000;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.header nav {
+  display: inline-block;
+}
+.header nav ul li {
+  list-style: none;
+}
+.header nav ul li a {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+.header nav ul li a:hover {
+  color: #D1B55A;
+}
+.header nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #D1B55A;
+  transition: width 0.3s ease-in-out;
+}
+.header nav ul li a:hover::after {
+  width: 100%;
+}
+.header nav .nav__menu__btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: right;
+  font-size: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  section.tenth-section .tenth-container {
+    text-align: center;
+  }
+  section.tenth-section .tenth-container h2 {
+    width: 100%;
+  }
+  section.second-section, section.third-section, section.fifth-section, section.eight-section, section.eighth-section, section.eleventh-section, section.twelfth-section, section.sixth-section, section.ninth-section, section.tenth-section {
+    grid-template-columns: unset;
+    grid-template-rows: auto;
+    width: 100%;
+    padding: 0 1em;
+    min-width: unset;
+    max-width: unset;
+  }
+  section.first-section {
+    grid-template-columns: unset;
+    grid-template-rows: auto;
+    width: 100%;
+    padding: 0 1em;
+    min-width: unset;
+    max-width: unset;
+    display: grid;
+  }
+  section.first-section .first-container .gallery {
+    gap: 5px 10px;
+    justify-content: center;
+  }
+  section.second-section .sec-first-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  section.second-section .sec-second-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  section.third-section .third-sec-second-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  section.fifth-section .fifth-sec-first-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  section.fifth-section .fifth-sec-second-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  section.eight-section .eight-sec-first-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  section.eight-section .eight-sec-second-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  section.eleventh-section .eleventh-sec-first-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  section.eleventh-section .eleventh-sec-second-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  section.twelfth-section .twelfth-sec-second-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  section.twelfth-section .twelfth-sec-first-container {
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .header nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 2;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+  }
+  .header nav ul li {
+    border-bottom: 0.5px solid #444;
+  }
+  .header nav .nav__menu__btn {
+    display: flex;
+  }
+  .nav-active {
+    display: flex !important;
+  }
+  .third-section,
+  .sixth-section,
+  .ninth-section,
+  .twelfth-section {
+    grid-template-areas: "first first" "second second";
+  }
+  .third-section .third-sec-first-container,
+  .third-section div.sixth-sec-first-container,
+  .third-section div.ninth-sec-first-container,
+  .third-section div.twelfth-sec-first-container,
+  .sixth-section .third-sec-first-container,
+  .sixth-section div.sixth-sec-first-container,
+  .sixth-section div.ninth-sec-first-container,
+  .sixth-section div.twelfth-sec-first-container,
+  .ninth-section .third-sec-first-container,
+  .ninth-section div.sixth-sec-first-container,
+  .ninth-section div.ninth-sec-first-container,
+  .ninth-section div.twelfth-sec-first-container,
+  .twelfth-section .third-sec-first-container,
+  .twelfth-section div.sixth-sec-first-container,
+  .twelfth-section div.ninth-sec-first-container,
+  .twelfth-section div.twelfth-sec-first-container {
+    grid-area: second;
+    padding-top: 2em;
+    justify-content: center;
+    align-items: center;
+  }
+  .third-section .third-sec-second-container,
+  .third-section .sixth-sec-second-container,
+  .third-section .ninth-sec-second-container,
+  .third-section .twelfth-sec-second-container,
+  .sixth-section .third-sec-second-container,
+  .sixth-section .sixth-sec-second-container,
+  .sixth-section .ninth-sec-second-container,
+  .sixth-section .twelfth-sec-second-container,
+  .ninth-section .third-sec-second-container,
+  .ninth-section .sixth-sec-second-container,
+  .ninth-section .ninth-sec-second-container,
+  .ninth-section .twelfth-sec-second-container,
+  .twelfth-section .third-sec-second-container,
+  .twelfth-section .sixth-sec-second-container,
+  .twelfth-section .ninth-sec-second-container,
+  .twelfth-section .twelfth-sec-second-container {
+    grid-area: first;
+  }
+  .third-section .third-sec-second-container button.layout-btn,
+  .third-section .sixth-sec-second-container button.layout-btn,
+  .third-section .ninth-sec-second-container button.layout-btn,
+  .third-section .twelfth-sec-second-container button.layout-btn,
+  .sixth-section .third-sec-second-container button.layout-btn,
+  .sixth-section .sixth-sec-second-container button.layout-btn,
+  .sixth-section .ninth-sec-second-container button.layout-btn,
+  .sixth-section .twelfth-sec-second-container button.layout-btn,
+  .ninth-section .third-sec-second-container button.layout-btn,
+  .ninth-section .sixth-sec-second-container button.layout-btn,
+  .ninth-section .ninth-sec-second-container button.layout-btn,
+  .ninth-section .twelfth-sec-second-container button.layout-btn,
+  .twelfth-section .third-sec-second-container button.layout-btn,
+  .twelfth-section .sixth-sec-second-container button.layout-btn,
+  .twelfth-section .ninth-sec-second-container button.layout-btn,
+  .twelfth-section .twelfth-sec-second-container button.layout-btn {
+    margin: 3em auto auto auto;
+  }
+  .third-section div.third-sec-first-container,
+  .fifth-section div.third-sec-first-container,
+  .eight-section div.third-sec-first-container,
+  .eleventh-section div.third-sec-first-container {
+    gap: 5px 10px;
+  }
+  .third-section .third-sec-second-container button.layout-btn,
+  .third-section .fifth-sec-first-container button.layout-btn,
+  .third-section .eight-sec-first-container button.layout-btn,
+  .third-section .eleventh-sec-first-container button.layout-btn,
+  .fifth-section .third-sec-second-container button.layout-btn,
+  .fifth-section .fifth-sec-first-container button.layout-btn,
+  .fifth-section .eight-sec-first-container button.layout-btn,
+  .fifth-section .eleventh-sec-first-container button.layout-btn,
+  .eight-section .third-sec-second-container button.layout-btn,
+  .eight-section .fifth-sec-first-container button.layout-btn,
+  .eight-section .eight-sec-first-container button.layout-btn,
+  .eight-section .eleventh-sec-first-container button.layout-btn,
+  .eleventh-section .third-sec-second-container button.layout-btn,
+  .eleventh-section .fifth-sec-first-container button.layout-btn,
+  .eleventh-section .eight-sec-first-container button.layout-btn,
+  .eleventh-section .eleventh-sec-first-container button.layout-btn {
+    margin: 3em auto auto auto;
+  }
+  .thirteen-section .thirteen-sec-hero {
+    justify-content: center;
+    align-items: center;
+  }
+  .thirteen-section .thirteen-sec-hero button.layout-btn {
+    margin: 3em auto auto auto;
+  }
+  .footer .footer-sec-first {
+    grid-template-columns: 2fr 2fr;
+  }
+  .footer .footer-sec-first ul {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  div img.genirc-img {
+    width: 100% !important;
+    padding-top: 15px;
+  }
+  section.res-section-layout div.res-font-set h2 {
+    font-size: 1.5em;
+    text-align: left;
+  }
+  section.res-section-layout div.res-font-set p {
+    font-size: 1em;
+    text-align: left;
+  }
+  .main section.hero-section div.hero-img {
+    flex-direction: row;
+    text-align: center;
+    gap: 10px;
+  }
+  .main section.hero-section div.hero-img h1 {
+    font-size: 2em;
+    width: 100%;
+  }
+  .main section.hero-section div.hero-img p {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .header,
+  .main,
+  .hero-section,
+  .footer,
+  .four-section,
+  .seven-section,
+  .thirteen-section {
+    width: 100%;
+  }
+  section.sixth-section .sixth-sec-second-container ul, section.sixth-section .ninth-sec-second-container ul, section.ninth-section .sixth-sec-second-container ul, section.ninth-section .ninth-sec-second-container ul, section.third-section .third-sec-second-container ul {
+    font-size: 1em;
+  }
+  #thirteen div h2 {
+    text-align: center;
+  }
+  .footer .footer-sec-first {
+    grid-template-columns: 1fr;
+  }
+  .footer .footer-sec-first ul {
+    width: 100%;
+    margin: 1em 0;
+    padding: 0 2em;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===============HERO SECTION==================== */
+.main .hero-section .hero-img {
+  background-image: url(../../../images/image-006-3.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 16/5; /* 16 / 9 = 0.5625 (height/width) */
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .hero-section .hero-img .hero-text {
+  color: #fff;
+  z-index: 1;
+  background-color: transparent;
+  font-family: "system-ui", Sans-serif;
+}
+.main .hero-section .hero-img h1 {
+  font-weight: bold;
+  font-size: 3.5em;
+}
+.main .hero-section .hero-img p {
+  line-height: 30px;
+}
+
+/* ===============FIRST SECTION==================== */
+.first-section {
+  font-size: 1rem;
+  font-family: "system-ui", Sans-serif;
+}
+.first-section .first-container {
+  text-align: center;
+}
+.first-section .first-container h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  color: #000000;
+  font-family: "system-ui", Sans-serif;
+}
+.first-section .first-container p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #606060;
+  margin: 1em auto;
+  line-height: 30px;
+  max-width: 55em;
+  font-family: "system-ui", Sans-serif;
+}
+.first-section .first-container .gallery {
+  flex-direction: row;
+  gap: 40px;
+}
+.first-section .first-container .gallery figure image {
+  min-width: 10%;
+}
+/* ===============SECOND SECTION==================== */
+.second-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.second-section .sec-first-container {
+  flex-direction: column;
+  gap: 10px;
+  min-width: auto;
+  max-width: 29em;
+}
+.second-section .sec-first-container h2 {
+  font-size: 2em;
+  color: #D1B55A;
+  font-family: "system-ui", Sans-serif;
+}
+.second-section .sec-first-container p {
+  font-size: 1.2em;
+  color: #606060;
+  margin: 1em auto;
+  line-height: 30px;
+  font-family: "system-ui", Sans-serif;
+}
+.second-section .sec-first-container ul {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: "system-ui", Sans-serif;
+}
+.second-section .sec-first-container ul li:nth-child(1) {
+  color: #D1B55A;
+  list-style: none;
+  line-height: 2em;
+}
+.second-section .sec-first-container ul li:nth-child(1) span {
+  background: #D1B55A;
+}
+.second-section .sec-first-container ul li:nth-child(2) {
+  color: #000000;
+  list-style: none;
+  line-height: 2em;
+}
+.second-section .sec-first-container ul li:nth-child(2) span {
+  background: #000000;
+}
+.second-section .sec-second-container {
+  flex-direction: column;
+  align-items: end;
+}
+.second-section .sec-second-container img {
+  width: auto;
+  max-height: 90%;
+  min-height: 40%;
+}
+
+/* ===============THIRD SECTION==================== */
+.third-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 4em;
+}
+.third-section .third-sec-first-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 25px 30px;
+}
+.third-section .third-sec-first-container figure img {
+  width: 100%;
+}
+.third-section .third-sec-second-container {
+  flex-direction: column;
+  gap: 20px;
+  justify-content: right;
+}
+.third-section .third-sec-second-container h2 {
+  font-size: 2em;
+  color: #D1B55A;
+  font-family: "system-ui", Sans-serif;
+}
+.third-section .third-sec-second-container ul {
+  text-decoration: none;
+  font-size: 1.2rem;
+  list-style: none;
+  font-family: "system-ui", Sans-serif;
+}
+.third-section .third-sec-second-container ul li {
+  color: #606060;
+  line-height: 2em;
+  padding-left: 45px;
+  position: relative;
+  margin-top: 1em;
+}
+.third-section .third-sec-second-container .layout-btn {
+  margin: 3em auto auto 0;
+}
+
+/* ===============FOUR SECTION==================== */
+.four-section .four-sec-hero-img {
+  background-image: url(../../../images/four-sec-img.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 16/4;
+  position: relative;
+}
+/* ===============FIFTH && EIGHT && ELEVENTH && TWELFTH SECTIONS==================== */
+.fifth-section, .eight-section, .eleventh-section, .twelfth-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.fifth-section .fifth-sec-first-container, .fifth-section .eight-sec-first-container, .fifth-section .eleventh-sec-first-container, .fifth-section .twelfth-sec-second-container, .eight-section .fifth-sec-first-container, .eight-section .eight-sec-first-container, .eight-section .eleventh-sec-first-container, .eight-section .twelfth-sec-second-container, .eleventh-section .fifth-sec-first-container, .eleventh-section .eight-sec-first-container, .eleventh-section .eleventh-sec-first-container, .eleventh-section .twelfth-sec-second-container, .twelfth-section .fifth-sec-first-container, .twelfth-section .eight-sec-first-container, .twelfth-section .eleventh-sec-first-container, .twelfth-section .twelfth-sec-second-container {
+  flex-direction: column;
+  gap: 10px;
+  min-width: auto;
+  max-width: 29em;
+}
+.fifth-section .fifth-sec-first-container h2, .fifth-section .eight-sec-first-container h2, .fifth-section .eleventh-sec-first-container h2, .fifth-section .twelfth-sec-second-container h2, .eight-section .fifth-sec-first-container h2, .eight-section .eight-sec-first-container h2, .eight-section .eleventh-sec-first-container h2, .eight-section .twelfth-sec-second-container h2, .eleventh-section .fifth-sec-first-container h2, .eleventh-section .eight-sec-first-container h2, .eleventh-section .eleventh-sec-first-container h2, .eleventh-section .twelfth-sec-second-container h2, .twelfth-section .fifth-sec-first-container h2, .twelfth-section .eight-sec-first-container h2, .twelfth-section .eleventh-sec-first-container h2, .twelfth-section .twelfth-sec-second-container h2 {
+  font-size: 2em;
+  color: #D1B55A;
+}
+.fifth-section .fifth-sec-first-container p, .fifth-section .eight-sec-first-container p, .fifth-section .eleventh-sec-first-container p, .fifth-section .twelfth-sec-second-container p, .eight-section .fifth-sec-first-container p, .eight-section .eight-sec-first-container p, .eight-section .eleventh-sec-first-container p, .eight-section .twelfth-sec-second-container p, .eleventh-section .fifth-sec-first-container p, .eleventh-section .eight-sec-first-container p, .eleventh-section .eleventh-sec-first-container p, .eleventh-section .twelfth-sec-second-container p, .twelfth-section .fifth-sec-first-container p, .twelfth-section .eight-sec-first-container p, .twelfth-section .eleventh-sec-first-container p, .twelfth-section .twelfth-sec-second-container p {
+  font-size: 1.2em;
+  color: #606060;
+  margin: 1em auto;
+  line-height: 30px;
+}
+.fifth-section .fifth-sec-first-container .layout-btn, .fifth-section .eight-sec-first-container .layout-btn, .fifth-section .eleventh-sec-first-container .layout-btn, .fifth-section .twelfth-sec-second-container .layout-btn, .eight-section .fifth-sec-first-container .layout-btn, .eight-section .eight-sec-first-container .layout-btn, .eight-section .eleventh-sec-first-container .layout-btn, .eight-section .twelfth-sec-second-container .layout-btn, .eleventh-section .fifth-sec-first-container .layout-btn, .eleventh-section .eight-sec-first-container .layout-btn, .eleventh-section .eleventh-sec-first-container .layout-btn, .eleventh-section .twelfth-sec-second-container .layout-btn, .twelfth-section .fifth-sec-first-container .layout-btn, .twelfth-section .eight-sec-first-container .layout-btn, .twelfth-section .eleventh-sec-first-container .layout-btn, .twelfth-section .twelfth-sec-second-container .layout-btn {
+  margin: 3em auto auto 0;
+}
+.fifth-section .fifth-sec-second-container, .fifth-section .eight-sec-second-container, .fifth-section .eleventh-sec-second-container, .fifth-section .twelfth-sec-first-container, .eight-section .fifth-sec-second-container, .eight-section .eight-sec-second-container, .eight-section .eleventh-sec-second-container, .eight-section .twelfth-sec-first-container, .eleventh-section .fifth-sec-second-container, .eleventh-section .eight-sec-second-container, .eleventh-section .eleventh-sec-second-container, .eleventh-section .twelfth-sec-first-container, .twelfth-section .fifth-sec-second-container, .twelfth-section .eight-sec-second-container, .twelfth-section .eleventh-sec-second-container, .twelfth-section .twelfth-sec-first-container {
+  flex-direction: column;
+  align-items: end;
+}
+.fifth-section .fifth-sec-second-container img, .fifth-section .eight-sec-second-container img, .fifth-section .eleventh-sec-second-container img, .fifth-section .twelfth-sec-first-container img, .eight-section .fifth-sec-second-container img, .eight-section .eight-sec-second-container img, .eight-section .eleventh-sec-second-container img, .eight-section .twelfth-sec-first-container img, .eleventh-section .fifth-sec-second-container img, .eleventh-section .eight-sec-second-container img, .eleventh-section .eleventh-sec-second-container img, .eleventh-section .twelfth-sec-first-container img, .twelfth-section .fifth-sec-second-container img, .twelfth-section .eight-sec-second-container img, .twelfth-section .eleventh-sec-second-container img, .twelfth-section .twelfth-sec-first-container img {
+  width: auto;
+  max-height: 90%;
+  min-height: 40%;
+}
+
+#twelfth .twelfth-sec-first-container {
+  align-items: start;
+}
+
+/* ===============SIXTH && NINTH SECTIONS==================== */
+.sixth-section, .ninth-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.sixth-section .sixth-sec-first-container, .sixth-section .ninth-sec-first-container, .ninth-section .sixth-sec-first-container, .ninth-section .ninth-sec-first-container {
+  flex-direction: column;
+  align-items: start;
+}
+.sixth-section .sixth-sec-first-container img, .sixth-section .ninth-sec-first-container img, .ninth-section .sixth-sec-first-container img, .ninth-section .ninth-sec-first-container img {
+  width: auto;
+  max-height: 90%;
+  min-height: 40%;
+}
+.sixth-section .sixth-sec-second-container, .sixth-section .ninth-sec-second-container, .ninth-section .sixth-sec-second-container, .ninth-section .ninth-sec-second-container {
+  flex-direction: column;
+  gap: 10px;
+}
+.sixth-section .sixth-sec-second-container h2, .sixth-section .ninth-sec-second-container h2, .ninth-section .sixth-sec-second-container h2, .ninth-section .ninth-sec-second-container h2 {
+  font-size: 2em;
+  color: #D1B55A;
+}
+.sixth-section .sixth-sec-second-container ul, .sixth-section .ninth-sec-second-container ul, .ninth-section .sixth-sec-second-container ul, .ninth-section .ninth-sec-second-container ul {
+  text-decoration: none;
+  font-size: 1.2em;
+  list-style: none;
+}
+.sixth-section .sixth-sec-second-container ul li, .sixth-section .ninth-sec-second-container ul li, .ninth-section .sixth-sec-second-container ul li, .ninth-section .ninth-sec-second-container ul li {
+  color: #606060;
+  line-height: 2em;
+  padding-left: 45px;
+  position: relative;
+  margin-top: 1em;
+  color: #D1B55A;
+  font-weight: bold;
+}
+.sixth-section .sixth-sec-second-container ul li p, .sixth-section .ninth-sec-second-container ul li p, .ninth-section .sixth-sec-second-container ul li p, .ninth-section .ninth-sec-second-container ul li p {
+  color: #606060;
+  margin: 0.5em auto;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+/* ===============SEVENTH SECTION==================== */
+.seven-section .seven-sec-hero-img {
+  background-image: url(../../../images/seven-sec.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 16/4;
+  position: relative;
+}
+/* ===============TENTH SECTION==================== */
+.tenth-section {
+  font-size: 1rem;
+  font-family: "system-ui", Sans-serif;
+}
+.tenth-section .tenth-container {
+  text-align: center;
+}
+.tenth-section .tenth-container h2 {
+  width: 50%;
+  text-align: center;
+  font-size: 2.5em;
+  color: #D1B55A;
+  font-family: "system-ui", Sans-serif;
+  margin: 0 auto;
+}
+.tenth-section .tenth-container p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #606060;
+  margin: 1em auto;
+  line-height: 30px;
+  max-width: 55em;
+  font-family: "system-ui", Sans-serif;
+}
+.tenth-section .tenth-container p span {
+  color: #D1B55A;
+  font-weight: 600;
+}
+
+/* ===============THIRTEEN SECTION==================== */
+.thirteen-section {
+  background-color: #D1B55A;
+  margin-top: 4em;
+}
+.thirteen-section .thirteen-sec-hero {
+  background-color: transparent;
+  flex-direction: row;
+  padding: 2.5em 0;
+}
+.thirteen-section .thirteen-sec-hero h2 {
+  background-color: inherit;
+  font-size: 2em;
+  color: #000000;
+}
+.thirteen-section .thirteen-sec-hero h2 img, .thirteen-section .thirteen-sec-hero h2 b {
+  background-color: inherit;
+}
+.thirteen-section .thirteen-sec-hero h2 img {
+  vertical-align: text-bottom;
+  width: 3em;
+}
+.thirteen-section .thirteen-sec-hero .layout-btn {
+  float: right;
+  margin: 3em 3em auto auto;
+  padding: 1em 2em;
+}
+.thirteen-section .thirteen-sec-hero .layout-btn a {
+  font-size: 2em;
+}
+
+/* ===============FOOTER==================== */
+.footer {
+  background-color: #000000;
+  margin: 0;
+}
+
+/*# sourceMappingURL=compile.css.map */

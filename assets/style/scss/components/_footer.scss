@@ -1,0 +1,89 @@
+@use "../partials/variables" as var;
+@use "../partials/global" as global;
+@use "../partials/global-layout" as global-layout;
+
+
+%l-footer-sec-first{
+  background-color: transparent;
+  @extend %l-main-container;
+  @include global-layout.l-grid-four-sec;
+  ul
+  {
+    text-decoration: none;
+    font-size: 1.2rem;
+    list-style: none;
+    font-family: var.$layout-font-style;
+    background-color: inherit;
+    margin: 3em auto;
+    li{
+      color: var.$para-color;
+      line-height: 1.4em;
+      margin-top: 1em;
+      background-color: inherit;
+      a{
+        background-color: inherit;
+        img{
+          background-color: inherit;
+          min-height: 2em;
+          max-height: 3em
+        }
+      }
+      p{
+        background-color: inherit;
+        font-size: 1em;
+        color: var.$main-heading-color;
+        font-family: var.$layout-font-style;
+      }
+    }
+  }
+    ul
+    {
+      li{
+        h3{
+          font-size: 1.3em;
+          background-color: inherit;
+          color: var.$layout-bg-color;
+          padding-bottom: 10px;
+        }
+        background-color: inherit;
+        a{
+          text-decoration: none;
+          //color: var.$sub-heading-color;
+          color: var.$main-heading-color;
+
+        }
+        .icon-color{
+          color: var.$bg-color;
+          //color: var.$sub-heading-color;
+          padding-right: .3em;
+          background-color: inherit;
+        }
+      }
+      .footer-icon{
+        a{
+          color: var.$layout-bg-color;
+        }
+
+      }
+    }
+}
+.horizontal-line{
+  @extend %l-main-container;
+
+}
+.footer-sec-second{
+  @extend %l-main-container;
+  background-color: inherit;
+  p{
+    background-color: transparent;
+    text-align: center;
+    font-size: 1em;
+    color: var.$para-color;
+    margin: 1em auto;
+    line-height: 30px;
+    font-family: var.$layout-font-style;
+    span{
+      background-color: inherit;
+    }
+  }
+}

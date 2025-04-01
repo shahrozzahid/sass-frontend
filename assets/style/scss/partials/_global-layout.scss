@@ -1,0 +1,105 @@
+
+@use "variables" as var;
+
+%add-layout-margin{
+  margin: 4em auto;
+
+}
+%l-btn-bg-color-1{
+  background-color: var.$layout-bg-color;
+
+}
+%l-btn-bg-color-2{
+  background-color: var.$sub-heading-color;
+}
+
+%l-main-container{
+  //min-width: 20rem;
+  max-width: 78rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%l-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin l-flex-direction-row{
+  flex-direction: row;
+}
+@mixin l-flex-direction-column{
+  flex-direction: column;
+}
+%l-btn-design{
+  color: var.$bg-color;
+  padding: .7em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 3em auto auto auto;
+
+a{
+  text-decoration: none;
+  color: var.$bg-color;
+  font-size: 1.4em;
+  font-family: var.$layout-font-style;
+}
+}
+%l-btn-design-first{
+  @extend %l-btn-design;
+  @extend %l-btn-bg-color-1;
+  a{
+    @extend %l-btn-bg-color-1;
+  }
+}
+%l-btn-design-second{
+  @extend %l-btn-design;
+  @extend %l-btn-bg-color-2;
+  a{
+    @extend %l-btn-bg-color-2;
+  }
+}
+
+ @mixin l-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+ @mixin l-grid-inner{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+ @mixin l-grid-four-sec{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+/*===============RESPONSIVE LAYOUT=================*/
+
+
+@mixin l-res-grid{
+  grid-template-columns: unset;
+  grid-template-rows: auto;
+  width: 100%;
+  padding: 0 1em;
+  min-width: unset;
+  max-width: unset;
+
+}
+@mixin l-res-grid-inner{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+@mixin l-res-grid-four-sec{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.res-fig-set{
+  figure{
+    margin: 0;
+    width: fit-content;
+  }
+}

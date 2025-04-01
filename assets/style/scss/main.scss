@@ -1,0 +1,399 @@
+@use "combine-partials" as layout;
+
+
+/* ===============HERO SECTION==================== */
+
+.main{
+  .hero-section{
+    .hero-img{
+      background-image: url(#{layout.$hero-img-url-1});
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      aspect-ratio: 16 / 5; /* 16 / 9 = 0.5625 (height/width) */
+      position: relative;
+      @extend %l-flex;
+      @include layout.l-flex-direction-column;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        @extend %add-overlay-img;
+      }
+      .hero-text{
+        color: layout.$bg-color;
+        z-index: 1;
+        background-color: transparent;
+        font-family: layout.$layout-font-style;
+      }
+      h1{
+        font-weight: bold;
+        font-size: 3.5em;
+      }
+      p{
+        line-height: 30px;
+
+      }
+    }
+  }
+}
+
+/* ===============FIRST SECTION==================== */
+.first-section{
+  font-size: 1rem;
+  font-family: layout.$layout-font-style;
+.first-container{
+  @extend %l-main-container;
+  @extend %add-layout-margin;
+  text-align: center;
+  h2{
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    color: layout.$sub-heading-color;
+    font-family: layout.$layout-font-style;
+
+  }
+  p{
+    text-align: center;
+    font-size: 1.2em;
+    color: layout.$para-color;
+    margin: 1em auto;
+    line-height: 30px;
+    max-width: 55em;
+    font-family: layout.$layout-font-style;
+
+
+  }
+  .gallery{
+    @extend %l-flex;
+    @include layout.l-flex-direction-row;
+    gap: 40px;
+    figure{
+      image{
+        min-width: 10%;
+      }
+    }
+  }
+  .layout-btn{
+    @extend %l-btn-design-first;
+  }
+}
+
+}
+/* ===============SECOND SECTION==================== */
+
+.second-section{
+  @include layout.l-grid;
+  @extend %l-main-container;
+  @extend %add-layout-margin;
+  .sec-first-container{
+    @extend %l-flex;
+    @include layout.l-flex-direction-column;
+    gap: 10px;
+    min-width: auto;
+    max-width: 29em;
+    h2{
+      font-size: 2em;
+      color: layout.$layout-bg-color;
+      font-family: layout.$layout-font-style;
+
+    }
+    p{
+      font-size: 1.2em;
+      color: layout.$para-color;
+      margin: 1em auto;
+      line-height: 30px;
+      font-family: layout.$layout-font-style;
+
+    }
+    ul{
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      font-family: layout.$layout-font-style;
+      li:nth-child(1){
+        color: layout.$layout-bg-color;
+        list-style: none;
+        line-height: 2em;
+
+        span{
+          @extend %span-square;
+          background: layout.$layout-bg-color;
+        }
+      }
+      li:nth-child(2){
+        color: layout.$sub-heading-color;
+        list-style: none;
+        line-height: 2em;
+        span{
+          @extend %span-square;
+          background: layout.$sub-heading-color;
+        }
+      }
+    }
+  }
+
+  .sec-second-container{
+    @extend %l-flex;
+    @include layout.l-flex-direction-column;
+    align-items: end;
+    img{
+      width: auto;
+      max-height: 90%;
+      min-height: 40%;
+    }
+  }
+
+}
+
+/* ===============THIRD SECTION==================== */
+
+.third-section{
+  @include layout.l-grid;
+  @extend %l-main-container;
+  @extend %add-layout-margin;
+  gap: 0px 4em;
+  .third-sec-first-container{
+    @include layout.l-grid-inner;
+    gap: 25px 30px;
+    figure{
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .third-sec-second-container{
+    @extend %l-flex;
+    @include layout.l-flex-direction-column;
+    gap: 20px;
+    justify-content: right;
+    h2{
+      font-size: 2em;
+      color: layout.$layout-bg-color;
+      font-family: layout.$layout-font-style;
+
+    }
+    ul{
+      text-decoration: none;
+      font-size: 1.2rem;
+      list-style: none;
+      font-family: layout.$layout-font-style;
+
+
+      li{
+        color: layout.$para-color;
+        line-height: 2em;
+        padding-left: 45px;
+        position: relative;
+        margin-top: 1em;
+        &::before {
+          @extend %circle-tick-desing;
+        }
+      }
+    }
+    .layout-btn{
+      @extend %l-btn-design-first;
+      margin: 3em auto auto 0;
+    }
+  }
+}
+/* ===============FOUR SECTION==================== */
+.four-section{
+  @extend %add-layout-margin;
+  .four-sec-hero-img{
+    background-image: url(#{layout.$hero-img-url-2});
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 16 / 4;
+    position: relative;
+    &::before {
+      @extend %add-overlay-img;
+    }
+  }
+}
+/* ===============FIFTH && EIGHT && ELEVENTH && TWELFTH SECTIONS==================== */
+.fifth-section, .eight-section, .eleventh-section, .twelfth-section{
+  @include layout.l-grid;
+  @extend %l-main-container;
+  @extend %add-layout-margin;
+  .fifth-sec-first-container, .eight-sec-first-container, .eleventh-sec-first-container, .twelfth-sec-second-container {
+    @extend %l-flex;
+    @include layout.l-flex-direction-column;
+    gap: 10px;
+    min-width: auto;
+    max-width: 29em;
+    h2{
+      font-size: 2em;
+      color: layout.$layout-bg-color;
+    }
+    p{
+      font-size: 1.2em;
+      color: layout.$para-color;
+      margin: 1em auto;
+      line-height: 30px;
+    }
+    .layout-btn{
+      @extend %l-btn-design-first;
+      margin: 3em auto auto 0;
+    }
+  }
+  .fifth-sec-second-container, .eight-sec-second-container, .eleventh-sec-second-container, .twelfth-sec-first-container{
+    @extend %l-flex;
+    @include layout.l-flex-direction-column;
+    align-items: end;
+    img{
+      width: auto;
+      max-height: 90%;
+      min-height: 40%;
+    }
+  }
+}
+#twelfth
+{
+  .twelfth-sec-first-container{
+    align-items: start;
+  }
+
+}
+/* ===============SIXTH && NINTH SECTIONS==================== */
+.sixth-section, .ninth-section{
+  @include layout.l-grid;
+  @extend %l-main-container;
+  @extend %add-layout-margin;
+  .sixth-sec-first-container, .ninth-sec-first-container{
+    @extend %l-flex;
+    @include layout.l-flex-direction-column;
+    align-items: start;
+    img{
+      width: auto;
+      max-height: 90%;
+      min-height: 40%;
+    }
+  }
+  .sixth-sec-second-container, .ninth-sec-second-container{
+    @extend %l-flex;
+    @include layout.l-flex-direction-column;
+    gap: 10px;
+    h2{
+      font-size: 2em;
+      color: layout.$layout-bg-color;
+    }
+    ul{
+      text-decoration: none;
+      font-size: 1.2em;
+      list-style: none;
+
+      li{
+        color: layout.$para-color;
+        line-height: 2em;
+        padding-left: 45px;
+        position: relative;
+        margin-top: 1em;
+        color: layout.$layout-bg-color;
+        font-weight: bold;
+        &::before {
+          @extend %circle-tick-desing;
+        }
+        p{
+          color: layout.$para-color;
+          margin: .5em auto;
+          line-height: 30px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+/* ===============SEVENTH SECTION==================== */
+.seven-section{
+  @extend %add-layout-margin;
+  .seven-sec-hero-img{
+    background-image: url(#{layout.$hero-img-url-3});
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 16 / 4;
+    position: relative;
+    &::before {
+      @extend %add-overlay-img;
+    }
+  }
+}
+/* ===============TENTH SECTION==================== */
+.tenth-section{
+  font-size: 1rem;
+  font-family: layout.$layout-font-style;
+  .tenth-container{
+    @extend %l-main-container;
+    @extend %add-layout-margin;
+    text-align: center;
+    h2{
+      width: 50%;
+      text-align: center;
+      font-size: 2.5em;
+      color: layout.$layout-bg-color;
+      font-family: layout.$layout-font-style;
+      margin: 0 auto;
+    }
+    p{
+      text-align: center;
+      font-size: 1.2em;
+      color: layout.$para-color;
+      margin: 1em auto;
+      line-height: 30px;
+      max-width: 55em;
+      font-family: layout.$layout-font-style;
+      span{
+        color: layout.$layout-bg-color;
+        font-weight: 600;
+      }
+    }
+  }
+}
+/* ===============THIRTEEN SECTION==================== */
+
+.thirteen-section{
+  background-color: layout.$layout-bg-color;
+  margin-top: 4em;
+  .thirteen-sec-hero{
+    background-color: transparent;
+    @extend %l-main-container;
+    @extend %l-flex;
+    @include layout.l-flex-direction-row;
+    padding: 2.5em 0;
+    h2{
+      background-color: inherit;
+      font-size: 2em;
+      color: layout.$sub-heading-color;
+     img,b{
+        background-color: inherit;
+      }
+      img{
+        vertical-align: text-bottom;
+        width: 3em;
+
+      }
+    }
+    .layout-btn{
+      float: right;
+      @extend %l-btn-design-second;
+      margin: 3em 3em auto auto;
+      padding: 1em 2em;
+      a{
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+/* ===============FOOTER==================== */
+
+.footer{
+  background-color: layout.$sub-heading-color;
+  margin: 0;
+  .footer-sec-first{
+    @extend %l-footer-sec-first;
+
+  }
+}
