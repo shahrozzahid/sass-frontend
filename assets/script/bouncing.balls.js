@@ -1,11 +1,10 @@
 // set up canvas
 
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
-
-const width = (canvas.width = window.innerWidth);
-const height = (canvas.height = window.innerHeight);
-
+const canvas  = document.querySelector("canvas");
+const ctx     = canvas.getContext("2d");
+const width   = (canvas.width = window.innerWidth);
+const height  = (canvas.height = window.innerHeight);
+const getPara = document.querySelector('p');
 // function to generate random number
 
 function random(min, max) {
@@ -18,14 +17,34 @@ function randomRGB() {
     return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
-class Ball {
-    constructor(x, y, velX, velY, color, size) {
+class Shape {
+
+    constructor(x, y, velX, velY) {
+
+        this.x    = x;
+        this.y    = y;
+        this.velX = velX;
+        this.velY = velY;
+
+    }
+}
+
+
+
+class Ball extends Shape{
+
+
+    constructor(x, y, velX, velY, color, size, exits = true) {
+
+        super(x, y, velX, velY);
+
         this.x = x;
         this.y = y;
         this.velX = velX;
         this.velY = velY;
         this.color = color;
         this.size = size;
+        this.exits = exits;
     }
 
     draw() {
@@ -58,7 +77,8 @@ class Ball {
 
     collisionDetect() {
         for (const ball of balls) {
-            if (!(this === ball)) {
+
+            if (!(this === ball) && ball.exits) {
                 const dx = this.x - ball.x;
                 const dy = this.y - ball.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
@@ -70,10 +90,97 @@ class Ball {
         }
     }
 }
+class EvilCircle extends Shape{
+
+    constructor(x,y, color = "white", size= 10) {
+
+        super(x,y, 20, 20);
+
+        this.x      = x;
+        this.y      = y;
+        this.color  = color;
+        this.size   = size;
+
+        window.addEventListener("keydown", (e) => {
+            switch (e.key) {
+                case "a":
+                    this.x -= this.velX;
+                    break;
+                case "d":
+                    this.x += this.velX;
+                    break;
+                case "w":
+                    this.y -= this.velY;
+                    break;
+                case "s":
+                    this.y += this.velY;
+                    break;
+            }
+        });
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.strokeStyle = this.color;
+        ctx.lineWidth = 3;
+        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
+
+    checkBounds() {
+
+        if ((this.x + this.size) >= width) {
+            this.x -= this.size;
+        }
+
+        if ((this.x - this.size) <= 0) {
+            this.x += this.size;
+        }
+
+        if ((this.y + this.size) >= height) {
+            this.y -= this.size;
+        }
+
+        if ((this.y - this.size) <= 0) {
+            this.y += this.size;
+        }
+    }
+    collisionDetect() {
+
+
+
+        for (const ball of balls) {
+
+            if (ball.exits) {
+
+                const dx = this.x - ball.x;
+                const dy = this.y - ball.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < this.size + ball.size) {
+                    ball.exits = false;
+                    ballSize -= 1;
+                    getPara.textContent = `Ball count: ${ballSize}`;
+
+                }
+            }
+        }
+    }
+
+
+}
+
+let ballSize = 25;
+
+const size = random(10, 20);
+const evil = new EvilCircle(
+    random(0 + size, width - size),
+    random(0 + size, height - size)
+);
 
 const balls = [];
 
-while (balls.length < 25) {
+while (balls.length < ballSize) {
     const size = random(10, 20);
     const ball = new Ball(
         // ball position always drawn at least one ball width
@@ -85,7 +192,7 @@ while (balls.length < 25) {
         randomRGB(),
         size
     );
-
+    getPara.textContent = `Ball count: ${ballSize}`;
     balls.push(ball);
 }
 
@@ -94,10 +201,16 @@ function loop() {
     ctx.fillRect(0, 0, width, height);
 
     for (const ball of balls) {
-        ball.draw();
-        ball.update();
-        ball.collisionDetect();
+        if (ball.exits) {
+            ball.draw();
+            ball.update();
+            ball.collisionDetect();
+        }
     }
+
+    evil.draw();
+    evil.checkBounds();
+    evil.collisionDetect();
 
     requestAnimationFrame(loop);
 }
